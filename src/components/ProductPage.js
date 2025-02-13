@@ -38,7 +38,11 @@ const ProductPage = () => {
     const handleDeleteProduct = async (id) => {
         await axios.delete(`http://localhost:8080/products/${id}`);
         fetchProducts();
-    };
+
+        console.log(id)
+
+       
+    }; 
 
     return (
         <div className="container mt-5">
@@ -61,6 +65,7 @@ const ProductPage = () => {
                             <td>
                                 <Button variant="warning" onClick={() => handleShowModal(product)}>Edit</Button>{' '}
                                 <Button variant="danger" onClick={() => handleDeleteProduct(product.id)}>Delete</Button>
+                                
                             </td>
                         </tr>
                     ))}
