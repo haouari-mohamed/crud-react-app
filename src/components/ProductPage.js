@@ -64,7 +64,7 @@ const ProductPage = () => {
                             <td>{product.price}</td>
                             <td>
                                 <Button variant="warning" onClick={() => handleShowModal(product)}>Edit</Button>{' '}
-                                <Button variant="danger" onClick={() => handleDeleteProduct(product.id)}>Delete</Button>
+                                <Button variant="primary" onClick={() => handleDeleteProduct(product.id)}>Delete</Button>
                                 
                             </td>
                         </tr>
